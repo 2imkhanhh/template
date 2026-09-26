@@ -1,0 +1,214 @@
+/* Products Page Styles */
+.products-page {
+    background-color: var(--color-header-bg);
+    min-height: 100vh;
+    padding-bottom: 100px;
+}
+
+.page-title {
+    font-family: 'Calistoga', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 400;
+    color: var(--color-header-text);
+    text-align: center;
+    padding: 60px 0 40px;
+}
+
+/* Toolbar */
+.products-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(194, 137, 59, 0.3);
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.toolbar-left,
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.filter-btn,
+.sort-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--color-header-text);
+    cursor: pointer;
+    padding: 0;
+}
+
+.filter-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.sort-btn .material-symbols-outlined {
+    font-size: 20px;
+}
+
+.product-count {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    color: rgba(194, 137, 59, 0.7);
+}
+
+/* Product Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
+}
+
+/* Product Card */
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background-color: var(--color-icon-bg);
+    /* Beige background */
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+/* Actions Overlay */
+.product-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px 20px;
+    transform: translateY(110%);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-actions {
+    transform: translateY(0);
+}
+
+.btn-add,
+.btn-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-xs);
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-add {
+    background: #0C402D;
+    color: #DBA760;
+}
+
+.btn-add .material-symbols-outlined {
+    font-size: var(--fs-base);
+}
+
+.btn-details {
+    background: #FCF7E0;
+    color: var(--color-header-text);
+}
+
+.btn-add:hover,
+.btn-details:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Product Info */
+.product-info {
+    text-align: center;
+}
+
+.product-name {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+    color: var(--color-header-text);
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: rgba(194, 137, 59, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 10px;
+    }
+
+    .page-title {
+        padding: 40px 0 20px;
+    }
+
+    .products-toolbar {
+        margin-bottom: 25px;
+    }
+
+    .btn-add,
+    .btn-details {
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+}

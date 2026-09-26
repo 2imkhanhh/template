@@ -1,0 +1,117 @@
+.store-page {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 125px);
+    min-height: 700px;
+    overflow: hidden;
+}
+
+.store-map-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.store-map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.store-panel {
+    position: absolute;
+    top: 50%;
+    right: max(20px, 5vw);
+    transform: translateY(-50%);
+    width: 100%;
+    max-width: 550px;
+    background-color: var(--color-header-bg);
+    padding: 20px 30px;
+    border-radius: 8px;
+    z-index: 10;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.store-title {
+    font-family: 'Calistoga', serif;
+    font-size: clamp(36px, 4vw, 48px);
+    font-weight: 400;
+    color: var(--color-header-text);
+    margin-bottom: 15px;
+}
+
+.store-locations {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.store-location-card {
+    background-color: #F8F1DF;
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.store-location-card:hover {
+    transform: translateY(-2px);
+}
+
+.store-location-card.active {
+    background-color: #F9EFD3;
+    border-color: rgba(194, 137, 59, 0.3);
+}
+
+.store-location-card h3 {
+    font-family: 'Calistoga', serif;
+    font-size: var(--fs-lg);
+    font-weight: 400;
+    color: var(--color-header-text);
+    margin-bottom: 5px;
+}
+
+.store-location-card p {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    color: var(--color-header-text);
+    line-height: 1.4;
+    margin-bottom: 5px;
+    opacity: 0.9;
+}
+
+.store-location-card p strong {
+    font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+    .store-page {
+        height: auto;
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+    }
+    
+    .store-map-container {
+        position: relative;
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .store-panel {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 40px 20px;
+    }
+}

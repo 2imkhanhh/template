@@ -1,0 +1,178 @@
+.apply-page {
+    width: 100%;
+    background-color: var(--color-header-bg);
+    padding-bottom: 80px;
+}
+
+.apply-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.apply-content {
+    max-width: 800px;
+    margin: -40px auto 0;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(12, 64, 45, 0.08);
+    position: relative;
+    z-index: 10;
+}
+
+.apply-title {
+    font-family: 'Calistoga', serif;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 400;
+    color: var(--color-topbar-bg);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.apply-subtitle {
+    font-family: var(--font-be-vietnam);
+    font-size: var(--fs-base);
+    color: var(--color-header-text);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.apply-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    color: var(--color-topbar-bg);
+}
+
+.form-group label span {
+    color: #e74c3c;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid rgba(194, 137, 59, 0.3);
+    border-radius: 8px;
+    background-color: #fafafa;
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-base);
+    color: var(--color-topbar-bg);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-header-text);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(194, 137, 59, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.file-upload-wrapper {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    border: 2px dashed rgba(194, 137, 59, 0.4);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.file-upload-wrapper:hover {
+    border-color: var(--color-header-text);
+    background-color: #fff;
+}
+
+.file-upload-wrapper input[type="file"] {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-upload-icon {
+    color: var(--color-header-text);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.file-upload-text {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    color: var(--color-topbar-bg);
+    text-align: center;
+}
+
+.file-upload-text span {
+    color: var(--color-header-text);
+    font-weight: 600;
+}
+
+.btn-submit {
+    background-color: var(--color-topbar-bg);
+    color: var(--color-header-bg);
+    font-family: var(--font-be-vietnam);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-submit:hover {
+    background-color: #082d20;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(12, 64, 45, 0.2);
+}
+
+@media (max-width: 768px) {
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .apply-content {
+        margin: -20px 20px 0;
+        padding: 24px;
+    }
+}

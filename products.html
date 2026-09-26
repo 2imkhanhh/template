@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vietaly - Sản phẩm</title>
+    <link rel="icon" href="images/logotab.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Calistoga&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="css/app.css">
+    <script type="module" src="js/app.js"></script>
+    <link rel="stylesheet" href="css/products.css">
+</head>
+
+<body>
+    <header class="header-wrapper">
+        <div class="top-bar">
+            <div class="custom-container">
+                <div class="hotline">HOTLINE: 0971773868</div>
+                <div class="language-selector" id="language-selector">
+                    <span class="lang-text" id="current-lang">VI</span>
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                    <div class="lang-dropdown">
+                        <div class="lang-option" data-value="en">EN</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="custom-container main-header-container">
+                <button id="mobile-menu-toggle" class="mobile-menu-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+                <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+                <nav class="nav-menu" id="nav-menu">
+                    <div class="mobile-menu-close">
+                        <button id="mobile-menu-close-btn" class="mobile-menu-btn">
+                            <span class="material-symbols-outlined">close</span>
+                        </button>
+                    </div>
+                    <a href="about.html">Giới thiệu</a>
+                    <div class="nav-item" data-path="/san-pham">
+                        <span style="cursor: pointer;" onclick="window.location.href='products.html'">Sản phẩm</span>
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                                <div class="mega-categories">
+                                    <h3>Danh mục</h3>
+                                    <ul>
+                                        <li><a href="#" class="cat-link active" data-target="cat-artisan">Socola
+                                                thủ công (Artisan)</a></li>
+                                        <li><a href="#" class="cat-link" data-target="cat-bars">Socola thanh
+                                                (Bars)</a></li>
+                                        <li><a href="#" class="cat-link" data-target="cat-truffles">Socola tươi
+                                                (Truffles)</a></li>
+                                        <li><a href="#" class="cat-link" data-target="cat-dark">Socola đen nguyên
+                                                chất</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="mega-products">
+                                    <div class="mega-products-header">
+                                        <h3>Sản phẩm nổi bật</h3>
+                                        <a href="#" class="view-all-link">Xem tất cả<span
+                                                class="material-symbols-outlined">arrow_right_alt</span></a>
+                                    </div>
+
+                                    <div class="mega-product-group active" id="cat-artisan">
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Artisan 1">
+                                            <h4>Hộp Socola Artisan Nghệ Thuật</h4>
+                                            <p class="price">850.000đ</p>
+                                        </div>
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Artisan 2">
+                                            <h4>Viên Socola Bonbon Hảo Hạng</h4>
+                                            <p class="price">320.000đ</p>
+                                        </div>
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Artisan 3">
+                                            <h4>Set Quà Tặng Artisan Độc Bản</h4>
+                                            <p class="price">1.500.000đ</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mega-product-group" id="cat-bars">
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Bar 1">
+                                            <h4>Thanh Socola Đen 85% Cacao</h4>
+                                            <p class="price">190.000đ</p>
+                                        </div>
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Bar 2">
+                                            <h4>Thanh Socola Sữa Trái Cây Hạt Dẻ</h4>
+                                            <p class="price">210.000đ</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="mega-product-group" id="cat-truffles">
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Truffle 1">
+                                            <h4>Truffle Trà Xanh Matcha</h4>
+                                            <p class="price">250.000đ</p>
+                                        </div>
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Truffle 2">
+                                            <h4>Truffle Dâu Tây Sữa</h4>
+                                            <p class="price">280.000đ</p>
+                                        </div>
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Truffle 3">
+                                            <h4>Truffle Caramel Muối Biển</h4>
+                                            <p class="price">260.000đ</p>
+                                        </div>
+                                        <div class="mega-product-card">
+                                            <img src="images/product1.png" alt="Truffle 4">
+                                            <h4>Truffle Socola Đắng Nguyên Chất</h4>
+                                            <p class="price">290.000đ</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="recruitment.html">Tuyển dụng</a>
+                    <a href="store.html">Cửa hàng</a>
+                    <a href="#">Đặt lịch trải nghiệm</a>
+                    <div class="magic-line"></div>
+                </nav>
+
+                <div class="logo-wrapper">
+                    <div class="logo-container">
+                        <a href="index.html" style="text-decoration: none;">
+                            <img src="images/logo.svg" alt="LA' VIETALY Logo">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm">
+                        <span class="material-symbols-outlined">search</span>
+                    </div>
+
+                    <div class="icon-actions">
+                        <a href="#" class="icon-btn">
+                            <span class="material-symbols-outlined">account_circle</span>
+                        </a>
+                        <a href="cart.html" class="icon-btn">
+                            <span class="material-symbols-outlined">local_mall</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="products-page">
+        <div class="custom-container">
+            <h1 class="page-title">Tất cả sản phẩm</h1>
+            <div class="products-toolbar">
+                <div class="toolbar-left">
+                    <button class="filter-btn">
+                        <img src="images/icon_filter.svg" alt="Filter" class="filter-icon">
+                        Filter
+                    </button>
+                    <span class="product-count">48 sản phẩm</span>
+                </div>
+                <div class="toolbar-right">
+                    <button class="sort-btn">
+                        Xếp theo
+                        <span class="material-symbols-outlined">expand_more</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/category1.png" alt="Socola Đen Nguyên Bản 72%" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Đen Nguyên Bản 72%</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/category2.png" alt="Socola Đen Nguyên Bản 72%" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Đen Nguyên Bản 72%</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/category3.png" alt="Socola Đen Nguyên Bản 72%" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Đen Nguyên Bản 72%</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/product4.png" alt="Socola Caramel Muối Biển" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Caramel Muối Biển</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/product1.png" alt="Socola Đen Nguyên Bản 72%" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Đen Nguyên Bản 72%</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/product2.png" alt="Socola Đen Nguyên Bản 72%" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Đen Nguyên Bản 72%</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/product3.png" alt="Socola Đen Nguyên Bản 72%" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Đen Nguyên Bản 72%</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="images/product4.png" alt="Socola Caramel Muối Biển" class="product-img">
+                        <div class="product-actions">
+                            <button class="btn-add">
+                                <span class="material-symbols-outlined">local_mall</span>
+                                Thêm
+                            </button>
+                            <button class="btn-details">Chi tiết</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Socola Caramel Muối Biển</h3>
+                        <p class="product-price">890.000 VND</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+    <footer class="footer-section">
+        <div class="custom-container">
+            <img src="images/logo footer.svg" alt="LA' VIETALY Logo" class="footer-huge-logo">
+            <div class="footer-grid">
+                <div class="footer-col footer-col-brand">
+                    <h3>LA'VIETALY</h3>
+                    <p>Địa chỉ: P.903, Tầng 9, Tòa nhà Diamond Plaza, 34 Lê Duẩn, Phường Sài Gòn, Thành phố Hồ Chí Minh,
+                        Việt Nam</p>
+                    <p>Email: anh.le@lavietaly.com<br>Số điện thoại: 0971773868</p>
+                </div>
+                <div class="footer-col">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="about.html">Về chúng tôi</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>SẢN PHẨM</h3>
+                    <ul>
+                        <li><a href="#">Chocolate</a></li>
+                        <li><a href="#">Chocolate & nuts</a></li>
+                        <li><a href="#">Chocolate cake</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>OTHER</h3>
+                    <ul>
+                        <li><a href="#">Term & Privacy</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-badges">
+                    <img src="images/register.svg" alt="Đã đăng ký Bộ Công Thương" class="bct-logo">
+                    <img src="images/noti.svg" alt="Đã thông báo Bộ Công Thương" class="bct-logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>
