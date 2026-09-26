@@ -10,169 +10,261 @@
     display: block;
 }
 
-.apply-content {
-    max-width: 800px;
-    margin: -40px auto 0;
-    padding: 40px;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 40px rgba(12, 64, 45, 0.08);
-    position: relative;
-    z-index: 10;
+.job-detail-container {
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 clamp(20px, 7vw, 170px);
+    display: flex;
+    gap: 60px;
 }
 
-.apply-title {
-    font-family: 'Calistoga', serif;
-    font-size: clamp(28px, 3vw, 40px);
-    font-weight: 400;
-    color: var(--color-topbar-bg);
-    text-align: center;
-    margin-bottom: 10px;
+.job-detail-left {
+    flex: 1;
 }
 
-.apply-subtitle {
+.job-detail-right {
+    width: 380px;
+    flex-shrink: 0;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-family: var(--font-be-vietnam);
-    font-size: var(--fs-base);
+    font-size: 13px;
     color: var(--color-header-text);
-    text-align: center;
+    margin-bottom: 30px;
+}
+
+.breadcrumb a {
+    color: var(--color-header-text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    opacity: 1;
+}
+
+.breadcrumb span {
+    opacity: 0.6;
+}
+
+.breadcrumb .active-page {
+    opacity: 1;
+}
+
+.breadcrumb .home-icon {
+    font-size: 16px;
+    margin-right: 4px;
+}
+
+.breadcrumb .chevron-icon {
+    font-size: 14px;
+}
+
+/* Header */
+.job-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 40px;
 }
 
-.apply-form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.form-group label {
-    font-family: var(--font-mona-sans);
-    font-size: var(--fs-sm);
-    font-weight: 600;
-    color: var(--color-topbar-bg);
-}
-
-.form-group label span {
-    color: #e74c3c;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    width: 100%;
-    padding: 14px 16px;
-    border: 1px solid rgba(194, 137, 59, 0.3);
-    border-radius: 8px;
-    background-color: #fafafa;
-    font-family: var(--font-mona-sans);
-    font-size: var(--fs-base);
-    color: var(--color-topbar-bg);
-    transition: all 0.3s ease;
-    outline: none;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-    border-color: var(--color-header-text);
-    background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(194, 137, 59, 0.1);
-}
-
-.form-group textarea {
-    resize: vertical;
-    min-height: 120px;
-}
-
-.file-upload-wrapper {
-    position: relative;
-    width: 100%;
-    height: 120px;
-    border: 2px dashed rgba(194, 137, 59, 0.4);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fafafa;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.file-upload-wrapper:hover {
-    border-color: var(--color-header-text);
-    background-color: #fff;
-}
-
-.file-upload-wrapper input[type="file"] {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.file-upload-icon {
+.job-title-wrapper h1 {
+    font-family: 'Calistoga', serif;
+    font-size: 42px;
+    font-weight: 400;
     color: var(--color-header-text);
-    font-size: 32px;
     margin-bottom: 8px;
 }
 
-.file-upload-text {
-    font-family: var(--font-mona-sans);
-    font-size: var(--fs-sm);
-    color: var(--color-topbar-bg);
-    text-align: center;
-}
-
-.file-upload-text span {
-    color: var(--color-header-text);
-    font-weight: 600;
-}
-
-.btn-submit {
-    background-color: var(--color-topbar-bg);
-    color: var(--color-header-bg);
+.job-location {
     font-family: var(--font-be-vietnam);
-    font-size: var(--fs-base);
-    font-weight: 600;
-    padding: 16px 32px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
+    font-size: 15px;
+    color: var(--color-header-text);
 }
 
-.btn-submit:hover {
-    background-color: #082d20;
+.btn-apply-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 24px;
+    border: 1px solid var(--color-header-text);
+    border-radius: 100px;
+    background: transparent;
+    color: var(--color-header-text);
+    font-family: var(--font-be-vietnam);
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-apply-outline:hover {
+    background: var(--color-header-text);
+    color: var(--color-header-bg);
+}
+
+/* Content Sections */
+.job-section {
+    margin-bottom: 40px;
+}
+
+.job-section h2 {
+    font-family: var(--font-mona-sans);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-header-text);
+    margin-bottom: 16px;
+}
+
+.job-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.job-section ul li {
+    font-family: var(--font-be-vietnam);
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-header-text);
+    opacity: 0.9;
+}
+
+/* Bottom Apply Button */
+.btn-apply-solid {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 32px;
+    background: var(--color-header-text);
+    color: var(--color-header-bg);
+    border: none;
+    border-radius: 100px;
+    font-family: var(--font-be-vietnam);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-apply-solid:hover {
+    background: #a87633;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(12, 64, 45, 0.2);
+    box-shadow: 0 4px 12px rgba(194, 137, 59, 0.2);
+}
+
+/* Right Column (Related Jobs) */
+.related-jobs-title {
+    font-family: var(--font-mona-sans);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--color-header-text);
+    margin-bottom: 24px;
+}
+
+.related-job-card {
+    border: 1px solid color-mix(in srgb, var(--color-header-text) 50%, transparent);
+    border-radius: 4px;
+    padding: 24px;
+    margin-bottom: 20px;
+    background: transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(194, 137, 59, 0.05);
+}
+
+.related-job-title {
+    font-family: var(--font-mona-sans);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-header-text);
+    margin-bottom: 8px;
+}
+
+.related-job-skills {
+    font-family: var(--font-mona-sans);
+    font-size: 13px;
+    color: var(--color-header-text);
+    opacity: 0.7;
+    margin-bottom: 20px;
+}
+
+.related-job-divider {
+    height: 1px;
+    background-color: rgba(194, 137, 59, 0.2);
+    margin-bottom: 16px;
+}
+
+.related-job-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.related-detail-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.related-detail-label {
+    font-family: var(--font-mona-sans);
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-header-text);
+    opacity: 0.8;
+}
+
+.related-detail-value {
+    font-family: var(--font-mona-sans);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-header-text);
+}
+
+.related-job-apply {
+    font-family: var(--font-mona-sans);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-header-text);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.related-job-apply:hover {
+    opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    .job-detail-container {
+        flex-direction: column;
+    }
+
+    .job-detail-right {
+        width: 100%;
+        margin-top: 40px;
+    }
 }
 
 @media (max-width: 768px) {
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 16px;
+    .job-header {
+        flex-direction: column;
+        gap: 20px;
     }
 
-    .apply-content {
-        margin: -20px 20px 0;
-        padding: 24px;
+    .job-title-wrapper h1 {
+        font-size: 32px;
     }
 }

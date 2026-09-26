@@ -622,6 +622,9 @@ body {
 .nav-menu .nav-item .material-symbols-outlined {
   font-size: var(--fs-lg);
 }
+.nav-product-link {
+  cursor: pointer;
+}
 .logo-wrapper {
   position: absolute;
   left: 50%;
@@ -642,6 +645,9 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 10px;
+}
+.logo-link {
+  text-decoration: none;
 }
 .logo-container a {
   display: flex;

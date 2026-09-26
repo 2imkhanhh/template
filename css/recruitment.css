@@ -293,7 +293,7 @@
 }
 
 .job-card {
-    border: 1px solid rgba(194, 137, 59, 0.2);
+    border: 1px solid color-mix(in srgb, var(--color-header-text) 50%, transparent);
     border-radius: 8px;
     padding: 30px;
     background-color: transparent;

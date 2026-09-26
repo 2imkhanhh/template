@@ -14,7 +14,9 @@ if (navMenu && magicLine && navItems.length > 0) {
         let itemPath = item.getAttribute('href') || item.getAttribute('data-path');
         if (itemPath === '/san-pham') itemPath = 'products.html';
 
-        if (itemPath === currentPath || (itemPath === 'products.html' && currentPath.startsWith('product-detail.html'))) {
+        if (itemPath === currentPath || 
+            (itemPath === 'products.html' && currentPath.startsWith('product-detail.html')) ||
+            (itemPath === 'recruitment.html' && currentPath.startsWith('apply.html'))) {
             activeItem = item;
             item.classList.add('active-nav');
         }
