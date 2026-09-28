@@ -16,7 +16,8 @@ if (navMenu && magicLine && navItems.length > 0) {
 
         if (itemPath === currentPath || 
             (itemPath === 'products.html' && currentPath.startsWith('product-detail.html')) ||
-            (itemPath === 'recruitment.html' && currentPath.startsWith('apply.html'))) {
+            (itemPath === 'recruitment.html' && currentPath.startsWith('apply.html')) ||
+            (itemPath === 'workshop.html' && currentPath.startsWith('workshop.html'))) {
             activeItem = item;
             item.classList.add('active-nav');
         }

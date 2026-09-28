@@ -1,0 +1,177 @@
+/* Workshop Page Styles */
+.workshop-page {
+    width: 100%;
+}
+
+.workshop-hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.workshop-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.workshop-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.workshop-hero-content {
+    position: absolute;
+    z-index: 2;
+    max-width: 900px;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.workshop-hero-title {
+    font-family: 'Calistoga', serif;
+    font-size: var(--fs-3xl);
+    font-weight: 400;
+    color: var(--color-header-bg); /* #FCF7E0 */
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.workshop-hero-subtitle {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    color: var(--color-header-bg);
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+}
+
+.workshop-who {
+    background-color: var(--color-header-bg);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.workshop-who-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.workshop-who h2 {
+    font-family: 'Calistoga', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    color: var(--color-header-text);
+    margin-bottom: 24px;
+    font-weight: 400;
+}
+
+.workshop-who p {
+    font-family: var(--font-mona-sans);
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 500;
+    color: var(--color-header-text);
+    line-height: 1.8;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .workshop-who {
+        padding: 60px 0;
+    }
+}
+
+/* Workshop Content Section */
+.workshop-content-section {
+    background-color: var(--color-topbar-bg);
+    padding: 80px 0;
+    color: var(--color-topbar-text);
+}
+
+.workshop-section-title {
+    font-family: 'Calistoga', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 400;
+    color: var(--color-topbar-text);
+}
+
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 40px;
+}
+
+.workshop-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workshop-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 40px;
+}
+
+.workshop-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.workshop-number {
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-header-bg);
+    color: var(--color-topbar-bg);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Calistoga', serif;
+    font-size: var(--fs-lg);
+    font-weight: 400;
+}
+
+.workshop-item h3 {
+    font-family: 'Calistoga', serif;
+    font-size: var(--fs-lg);
+    margin-bottom: 15px;
+    font-weight: 400;
+    color: var(--color-topbar-text);
+}
+
+.workshop-item p {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+@media (max-width: 992px) {
+    .workshop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .workshop-grid {
+        grid-template-columns: 1fr;
+    }
+}
