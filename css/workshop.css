@@ -40,7 +40,7 @@
     font-family: 'Calistoga', serif;
     font-size: var(--fs-3xl);
     font-weight: 400;
-    color: var(--color-header-bg); /* #FCF7E0 */
+    color: var(--color-header-bg);
     margin-bottom: 24px;
     line-height: 1.2;
 }
@@ -173,5 +173,264 @@
 @media (max-width: 576px) {
     .workshop-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Schedule Section */
+.schedule-section {
+    background-color: var(--color-header-bg);
+    padding: 60px 0;
+    color: var(--color-header-text);
+}
+
+.schedule-title {
+    font-family: 'Calistoga', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: var(--color-header-text);
+}
+
+.schedule-subtitle {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-base);
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-header-text);
+    opacity: 0.7;
+}
+
+.schedule-box {
+    border: 1px solid rgba(194, 137, 59, 0.3);
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.schedule-days {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.day-badge {
+    background-color: var(--color-header-text);
+    color: var(--color-header-bg);
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+}
+
+.schedule-details {
+    display: flex;
+    background-color: rgba(194, 137, 59, 0.15);
+    padding: 30px;
+}
+
+.detail-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.detail-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-text span {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    opacity: 0.8;
+}
+
+.detail-text strong {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.schedule-contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    justify-content: center;
+}
+
+.contact-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact-text span {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.contact-text strong {
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.contact-divider {
+    width: 1px;
+    height: 40px;
+    background-color: rgba(194, 137, 59, 0.3);
+}
+
+.schedule-action {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-book {
+    display: inline-flex;
+    background-color: var(--color-header-text);
+    color: var(--color-header-bg);
+    border-radius: 50%;
+    font-family: var(--font-mona-sans);
+    font-size: var(--fs-base);
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    width: 120px;
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn-book:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .workshop-hero-title { font-size: 32px; margin-bottom: 15px; }
+    .workshop-hero-subtitle { font-size: 16px; }
+    .workshop-who p { font-size: 14px; }
+    
+    .workshop-content-section,
+    .schedule-section {
+        padding: 40px 0;
+    }
+
+    .workshop-section-title,
+    .schedule-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .workshop-grid {
+        gap: 40px 20px;
+    }
+
+    .workshop-item h3 { font-size: 18px; margin-bottom: 10px; }
+    .workshop-item p { font-size: 13px; }
+    
+    .workshop-number {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+        bottom: -18px;
+    }
+
+    .schedule-subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .schedule-days {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .day-badge {
+        padding: 8px 20px;
+        font-size: 13px;
+    }
+
+    .schedule-box {
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .schedule-details {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .detail-item {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    
+    .detail-icon {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .detail-text span { font-size: 12px; }
+    .detail-text strong { font-size: 14px; }
+
+    .schedule-contacts {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-bottom: 40px;
+    }
+    
+    .contact-divider {
+        display: none;
+    }
+    
+    .contact-item {
+        justify-content: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .contact-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .contact-text span { font-size: 11px; }
+    .contact-text strong { font-size: 13px; }
+
+    .btn-book {
+        width: 90px;
+        height: 90px;
+        font-size: 14px;
     }
 }
