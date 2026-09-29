@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const sections = document.querySelectorAll('.value-content-item');
     const navItems = document.querySelectorAll('.values-nav-item');
 
@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const id = entry.target.getAttribute('id');
-                    
+
                     navItems.forEach(item => {
                         item.classList.remove('active');
                     });
-                    
+
                     const activeNav = document.querySelector(`.values-nav-item[data-target="${id}"]`);
                     if (activeNav) {
                         activeNav.classList.add('active');
@@ -27,13 +27,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         section.classList.remove('active');
                     });
                     entry.target.classList.add('active');
-                    
-                    // Sync horizontal nav scrolling on mobile
+
                     if (window.innerWidth <= 768 && activeNav) {
                         const navContainer = document.querySelector('.values-nav');
                         if (navContainer) {
                             const scrollLeft = activeNav.offsetLeft - (navContainer.clientWidth / 2) + (activeNav.clientWidth / 2);
-                            // Avoid setting active class again to prevent loop, just scroll
                             navContainer.scrollTo({ left: scrollLeft, behavior: 'smooth' });
                         }
                     }
@@ -45,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             observer.observe(section);
         });
 
-        // Handle horizontal swiping on mobile to highlight items
         const navContainer = document.querySelector('.values-nav');
         if (navContainer) {
             let scrollTimeout;
@@ -56,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         let closestItem = null;
                         let minDistance = Infinity;
                         const containerCenter = navContainer.scrollLeft + navContainer.clientWidth / 2;
-                        
+
                         navItems.forEach(item => {
                             const itemCenter = item.offsetLeft + item.clientWidth / 2;
                             const distance = Math.abs(itemCenter - containerCenter);
@@ -65,18 +62,18 @@ document.addEventListener('DOMContentLoaded', function() {
                                 closestItem = item;
                             }
                         });
-                        
+
                         if (closestItem && !closestItem.classList.contains('active')) {
                             navItems.forEach(item => item.classList.remove('active'));
                             closestItem.classList.add('active');
                         }
-                    }, 50); // Debounce to avoid excessive updates
+                    }, 50);
                 }
             });
         }
 
         navItems.forEach(item => {
-            item.addEventListener('click', function() {
+            item.addEventListener('click', function () {
                 const id = this.getAttribute('data-target');
                 const targetSection = document.getElementById(id);
                 if (targetSection) {
