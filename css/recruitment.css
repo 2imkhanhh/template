@@ -125,8 +125,6 @@
     grid-row: 2;
 }
 
-
-/* Jobs Section */
 .jobs-section {
     background-color: var(--color-header-bg);
     padding: 80px 20px;
@@ -285,6 +283,7 @@
     .recruitment-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .nhip-song-grid {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: auto 250px 250px;
@@ -315,6 +314,7 @@
         grid-column: 2;
         grid-row: 3;
     }
+
     .jobs-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -348,6 +348,7 @@
     .recruitment-title {
         margin-bottom: 40px;
     }
+
     .nhip-song-section {
         padding: 40px 20px;
     }
@@ -365,6 +366,7 @@
         grid-row: auto;
         height: 250px;
     }
+
     .jobs-section {
         padding: 40px 20px;
     }

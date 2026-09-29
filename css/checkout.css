@@ -171,7 +171,6 @@
     background-color: #FCF7E0;
 }
 
-/* Payment Methods */
 .payment-methods-box {
     border: 1px solid rgba(194, 137, 59, 0.5);
     border-radius: 10px;
@@ -265,7 +264,6 @@
     text-decoration: underline;
 }
 
-/* Right side ticket wrapper */
 .checkout-summary-section {
     width: 450px;
 }
@@ -374,7 +372,6 @@
     color: var(--color-header-text);
 }
 
-/* Coupon Box */
 .ticket-top .coupon-box {
     display: flex;
     background-color: transparent;
@@ -426,7 +423,6 @@
     color: #F5E7C6;
 }
 
-/* Bottom Ticket */
 .ticket-bottom .summary-row {
     display: flex;
     justify-content: space-between;
@@ -455,8 +451,6 @@
     color: #DBA760;
 }
 
-/* Responsive */
-
 @media (max-width: 992px) {
     .checkout-container {
         flex-direction: column;
@@ -481,11 +475,11 @@
     .form-row {
         flex-direction: column;
     }
-    
+
     .delivery-methods {
         flex-direction: row;
     }
-    
+
     .delivery-option {
         padding: 10px 5px;
         gap: 5px;
@@ -494,13 +488,13 @@
     .address-row {
         grid-template-columns: 1fr;
     }
-    
+
     .checkout-title-row {
         flex-direction: column;
         gap: 10px;
         align-items: flex-start;
     }
-    
+
     .checkout-title {
         font-size: 28px;
     }
@@ -510,47 +504,48 @@
     .checkout-summary-section {
         max-width: 100%;
     }
-    
+
     .ticket-top {
         padding: 20px 15px;
         background-size: cover;
     }
-    
+
     .ticket-bottom {
         padding: 20px 15px;
         background-size: cover;
     }
-    
+
     .summary-item {
         gap: 10px;
     }
-    
+
     .summary-item-img {
         width: 50px;
         height: 50px;
     }
-    
+
     .summary-item-img img {
         width: 35px;
     }
-    
+
     .summary-item-name {
         font-size: 12px;
     }
-    
-    .new-price, .old-price {
+
+    .new-price,
+    .old-price {
         font-size: 12px;
     }
-    
+
     .summary-item-qty {
         gap: 5px;
     }
-    
+
     .summary-item-qty .qty-btn {
         width: 20px;
         height: 20px;
     }
-    
+
     .checkout-footer-links {
         flex-direction: column;
         gap: 10px;

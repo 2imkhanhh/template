@@ -1,4 +1,3 @@
-/* Workshop Page Styles */
 .workshop-page {
     width: 100%;
 }
@@ -82,7 +81,6 @@
     opacity: 0.8;
 }
 
-/* Workshop Content Section */
 .workshop-content-section {
     background-color: var(--color-topbar-bg);
     padding: 80px 0;
@@ -158,7 +156,6 @@
     opacity: 0.8;
 }
 
-/* Schedule Section */
 .schedule-section {
     background-color: var(--color-header-bg);
     padding: 60px 0;
@@ -326,10 +323,20 @@
     .workshop-who {
         padding: 60px 0;
     }
-    .workshop-hero-title { font-size: 32px; margin-bottom: 15px; }
-    .workshop-hero-subtitle { font-size: 16px; }
-    .workshop-who p { font-size: 14px; }
-    
+
+    .workshop-hero-title {
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+
+    .workshop-hero-subtitle {
+        font-size: 16px;
+    }
+
+    .workshop-who p {
+        font-size: 14px;
+    }
+
     .workshop-content-section,
     .schedule-section {
         padding: 40px 0;
@@ -345,9 +352,15 @@
         gap: 40px 20px;
     }
 
-    .workshop-item h3 { font-size: 18px; margin-bottom: 10px; }
-    .workshop-item p { font-size: 13px; }
-    
+    .workshop-item h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .workshop-item p {
+        font-size: 13px;
+    }
+
     .workshop-number {
         width: 36px;
         height: 36px;
@@ -374,25 +387,30 @@
         padding: 20px;
         margin-bottom: 30px;
     }
-    
+
     .schedule-details {
         flex-direction: column;
         gap: 20px;
         padding: 15px;
     }
-    
+
     .detail-item {
         justify-content: flex-start;
         gap: 15px;
     }
-    
+
     .detail-icon {
         width: 32px;
         height: 32px;
     }
-    
-    .detail-text span { font-size: 12px; }
-    .detail-text strong { font-size: 14px; }
+
+    .detail-text span {
+        font-size: 12px;
+    }
+
+    .detail-text strong {
+        font-size: 14px;
+    }
 
     .schedule-contacts {
         flex-direction: column;
@@ -400,24 +418,29 @@
         align-items: flex-start;
         margin-bottom: 40px;
     }
-    
+
     .contact-divider {
         display: none;
     }
-    
+
     .contact-item {
         justify-content: flex-start;
         width: 100%;
         gap: 10px;
     }
-    
+
     .contact-icon {
         width: 24px;
         height: 24px;
     }
-    
-    .contact-text span { font-size: 11px; }
-    .contact-text strong { font-size: 13px; }
+
+    .contact-text span {
+        font-size: 11px;
+    }
+
+    .contact-text strong {
+        font-size: 13px;
+    }
 
     .btn-book {
         width: 90px;
