@@ -456,6 +456,7 @@
 }
 
 /* Responsive */
+
 @media (max-width: 992px) {
     .checkout-container {
         flex-direction: column;

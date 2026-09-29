@@ -105,13 +105,6 @@
     transition: background 0.3s ease, color 0.3s ease;
 }
 
-@media (hover: hover) {
-    .gallery-arrow:hover {
-        background: var(--color-header-text);
-        color: #FFFFFF;
-    }
-}
-
 .prev-arrow {
     left: 15px;
 }
@@ -307,37 +300,6 @@
 
 
 /* --- Responsive Design --- */
-@media (max-width: 1024px) {
-    .product-detail-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-}
-
-@media (max-width: 768px) {
-    .product-gallery {
-        flex-direction: column-reverse;
-    }
-
-    .gallery-thumbnails {
-        flex-direction: row;
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    .thumbnail {
-        flex-shrink: 0;
-    }
-
-    .add-to-cart-row {
-        flex-direction: row;
-    }
-
-    .btn-add-cart {
-        padding: 15px 0;
-        flex: 1;
-    }
-}
 
 /* --- Suggested Section --- */
 .suggested-section {
@@ -373,13 +335,6 @@
     color: #8C6A45;
     transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
     flex-shrink: 0;
-}
-
-@media (hover: hover) {
-    .carousel-nav-btn:hover {
-        background: var(--color-header-text);
-        color: #FFFFFF;
-    }
 }
 
 .showcase-track-container {
@@ -533,12 +488,38 @@
 }
 
 @media (max-width: 1024px) {
+    .product-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
     .product-card {
         flex: 0 0 calc(33.333% - 16px);
     }
 }
 
 @media (max-width: 768px) {
+    .product-gallery {
+        flex-direction: column-reverse;
+    }
+
+    .gallery-thumbnails {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .thumbnail {
+        flex-shrink: 0;
+    }
+
+    .add-to-cart-row {
+        flex-direction: row;
+    }
+
+    .btn-add-cart {
+        padding: 15px 0;
+        flex: 1;
+    }
     .product-card {
         flex: 0 0 calc(50% - 12px);
     }
@@ -547,5 +528,16 @@
 @media (max-width: 480px) {
     .product-card {
         flex: 0 0 100% !important;
+    }
+}
+
+@media (hover: hover) {
+    .gallery-arrow:hover {
+        background: var(--color-header-text);
+        color: #FFFFFF;
+    }
+    .carousel-nav-btn:hover {
+        background: var(--color-header-text);
+        color: #FFFFFF;
     }
 }

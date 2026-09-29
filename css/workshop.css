@@ -82,12 +82,6 @@
     opacity: 0.8;
 }
 
-@media (max-width: 768px) {
-    .workshop-who {
-        padding: 60px 0;
-    }
-}
-
 /* Workshop Content Section */
 .workshop-content-section {
     background-color: var(--color-topbar-bg);
@@ -162,18 +156,6 @@
     font-weight: 400;
     line-height: 1.5;
     opacity: 0.8;
-}
-
-@media (max-width: 992px) {
-    .workshop-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 576px) {
-    .workshop-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* Schedule Section */
@@ -334,7 +316,16 @@
     transform: scale(1.05);
 }
 
+@media (max-width: 992px) {
+    .workshop-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .workshop-who {
+        padding: 60px 0;
+    }
     .workshop-hero-title { font-size: 32px; margin-bottom: 15px; }
     .workshop-hero-subtitle { font-size: 16px; }
     .workshop-who p { font-size: 14px; }
@@ -432,5 +423,11 @@
         width: 90px;
         height: 90px;
         font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .workshop-grid {
+        grid-template-columns: 1fr;
     }
 }

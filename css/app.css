@@ -418,20 +418,6 @@
   transition-timing-function: var(--ease-in-out);
 }
 
-@media (hover: hover) {
-  .hover\:bg-gray-100:hover {
-    background-color: var(--color-gray-100);
-  }
-
-  .hover\:text-gray-400:hover {
-    color: var(--color-gray-400);
-  }
-
-  .hover\:text-gray-700:hover {
-    color: var(--color-gray-700);
-  }
-}
-
 .focus\:border-blue-300:focus {
   border-color: var(--color-blue-300);
 }
@@ -462,116 +448,8 @@
   color: var(--color-gray-800);
 }
 
-@media (width >=40rem) {
-  .sm\:flex {
-    display: flex;
-  }
-
-  .sm\:hidden {
-    display: none;
-  }
-
-  .sm\:flex-1 {
-    flex: 1;
-  }
-
-  .sm\:items-center {
-    align-items: center;
-  }
-
-  .sm\:justify-between {
-    justify-content: space-between;
-  }
-
-  .sm\:justify-start {
-    justify-content: flex-start;
-  }
-
-  .sm\:gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
-
-  .sm\:px-6 {
-    padding-inline: calc(var(--spacing) * 6);
-  }
-
-  .sm\:pt-0 {
-    padding-top: 0px;
-  }
-}
-
-@media (width >=64rem) {
-  .lg\:px-8 {
-    padding-inline: calc(var(--spacing) * 8);
-  }
-}
-
 .rtl\:flex-row-reverse:where(:dir(rtl), [dir="rtl"], [dir="rtl"] *) {
   flex-direction: row-reverse;
-}
-
-@media (prefers-color-scheme: dark) {
-  .dark\:border-gray-600 {
-    border-color: var(--color-gray-600);
-  }
-
-  .dark\:bg-gray-700 {
-    background-color: var(--color-gray-700);
-  }
-
-  .dark\:bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
-
-  .dark\:bg-gray-900 {
-    background-color: var(--color-gray-900);
-  }
-
-  .dark\:text-gray-200 {
-    color: var(--color-gray-200);
-  }
-
-  .dark\:text-gray-300 {
-    color: var(--color-gray-300);
-  }
-
-  .dark\:text-gray-400 {
-    color: var(--color-gray-400);
-  }
-
-  .dark\:text-gray-600 {
-    color: var(--color-gray-600);
-  }
-
-  @media (hover: hover) {
-    .dark\:hover\:bg-gray-900:hover {
-      background-color: var(--color-gray-900);
-    }
-
-    .dark\:hover\:text-gray-200:hover {
-      color: var(--color-gray-200);
-    }
-
-    .dark\:hover\:text-gray-300:hover {
-      color: var(--color-gray-300);
-    }
-  }
-
-  .dark\:focus\:border-blue-700:focus {
-    border-color: var(--color-blue-700);
-  }
-
-  .dark\:focus\:border-blue-800:focus {
-    border-color: var(--color-blue-800);
-  }
-
-  .dark\:active\:bg-gray-700:active {
-    background-color: var(--color-gray-700);
-  }
-
-  .dark\:active\:text-gray-300:active {
-    color: var(--color-gray-300);
-  }
 }
 
 :root {
@@ -1163,29 +1041,286 @@ body {
   object-fit: contain;
 }
 
-@media (max-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
 
-  .footer-col-brand,
-  .footer-col:nth-child(4),
-  .footer-col-badges {
-    grid-column: span 2;
-  }
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
 
-  .footer-col-badges {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
 
-  .bct-logo {
-    max-width: 100%;
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
+
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+
+    *,
+    ::before,
+    ::after,
+    ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
+      --tw-border-style: solid;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-duration: initial;
+      --tw-ease: initial;
+    }
   }
 }
 
-@media (max-width: 1024px) {
+@media (width >=64rem){
+  .lg\:px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+}
+
+@media (width >=40rem){
+  .sm\:flex {
+    display: flex;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:flex-1 {
+    flex: 1;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+
+  .sm\:justify-between {
+    justify-content: space-between;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .sm\:gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+
+  .sm\:px-6 {
+    padding-inline: calc(var(--spacing) * 6);
+  }
+
+  .sm\:pt-0 {
+    padding-top: 0px;
+  }
+}
+
+@media (prefers-color-scheme: dark){
+  .dark\:border-gray-600 {
+    border-color: var(--color-gray-600);
+  }
+
+  .dark\:bg-gray-700 {
+    background-color: var(--color-gray-700);
+  }
+
+  .dark\:bg-gray-800 {
+    background-color: var(--color-gray-800);
+  }
+
+  .dark\:bg-gray-900 {
+    background-color: var(--color-gray-900);
+  }
+
+  .dark\:text-gray-200 {
+    color: var(--color-gray-200);
+  }
+
+  .dark\:text-gray-300 {
+    color: var(--color-gray-300);
+  }
+
+  .dark\:text-gray-400 {
+    color: var(--color-gray-400);
+  }
+
+  .dark\:text-gray-600 {
+    color: var(--color-gray-600);
+  }
+
+  @media (hover: hover) {
+    .dark\:hover\:bg-gray-900:hover {
+      background-color: var(--color-gray-900);
+    }
+
+    .dark\:hover\:text-gray-200:hover {
+      color: var(--color-gray-200);
+    }
+
+    .dark\:hover\:text-gray-300:hover {
+      color: var(--color-gray-300);
+    }
+  }
+
+  .dark\:focus\:border-blue-700:focus {
+    border-color: var(--color-blue-700);
+  }
+
+  .dark\:focus\:border-blue-800:focus {
+    border-color: var(--color-blue-800);
+  }
+
+  .dark\:active\:bg-gray-700:active {
+    background-color: var(--color-gray-700);
+  }
+
+  .dark\:active\:text-gray-300:active {
+    color: var(--color-gray-300);
+  }
+}
+
+@media (max-width: 1024px){
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1356,7 +1491,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
   .header-actions {
     gap: 12px;
   }
@@ -1376,179 +1511,44 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px){
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-col-brand,
+  .footer-col:nth-child(4),
+  .footer-col-badges {
+    grid-column: span 2;
+  }
+
+  .footer-col-badges {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .bct-logo {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px){
   .mega-product-card {
     flex: 0 0 100%;
   }
 }
 
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-}
+@media (hover: hover){
+  .hover\:bg-gray-100:hover {
+    background-color: var(--color-gray-100);
+  }
 
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-}
+  .hover\:text-gray-400:hover {
+    color: var(--color-gray-400);
+  }
 
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-
-@property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-tracking {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-
-@property --tw-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-
-@property --tw-inset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-
-@property --tw-inset-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-inset-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-
-@property --tw-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-
-@property --tw-inset-ring-color {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-inset-ring-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-
-@property --tw-ring-inset {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-ring-offset-width {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0px;
-}
-
-@property --tw-ring-offset-color {
-  syntax: "*";
-  inherits: false;
-  initial-value: #fff;
-}
-
-@property --tw-ring-offset-shadow {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0 0 #0000;
-}
-
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
-
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-
-    *,
-    ::before,
-    ::after,
-    ::backdrop {
-      --tw-rotate-x: initial;
-      --tw-rotate-y: initial;
-      --tw-rotate-z: initial;
-      --tw-skew-x: initial;
-      --tw-skew-y: initial;
-      --tw-border-style: solid;
-      --tw-leading: initial;
-      --tw-font-weight: initial;
-      --tw-tracking: initial;
-      --tw-shadow: 0 0 #0000;
-      --tw-shadow-color: initial;
-      --tw-shadow-alpha: 100%;
-      --tw-inset-shadow: 0 0 #0000;
-      --tw-inset-shadow-color: initial;
-      --tw-inset-shadow-alpha: 100%;
-      --tw-ring-color: initial;
-      --tw-ring-shadow: 0 0 #0000;
-      --tw-inset-ring-color: initial;
-      --tw-inset-ring-shadow: 0 0 #0000;
-      --tw-ring-inset: initial;
-      --tw-ring-offset-width: 0px;
-      --tw-ring-offset-color: #fff;
-      --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-duration: initial;
-      --tw-ease: initial;
-    }
+  .hover\:text-gray-700:hover {
+    color: var(--color-gray-700);
   }
 }
